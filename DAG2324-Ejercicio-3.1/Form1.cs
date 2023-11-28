@@ -25,19 +25,6 @@ namespace DAG2324_Ejercicio_3._1
             int numPalabras = 0;
 =======
             char tipoTelegrama = ' ';
->>>>>>> 21877174ea8ee4178478e459c169de2aaa6ffee1
-            double coste;
-            textoTelegrama = txtTelegrama.Text;
-<<<<<<< HEAD
-            
-=======
-
-            char[] delimitadores = new char[] { ' ', '\r', '\n' };
-            int numPalabras = textoTelegrama.Split(delimitadores, StringSplitOptions.RemoveEmptyEntries).Length;
-
-            /*quitamos las variables de prgem que hemos dejado en comentarios posteriores,
-            para poder añadir la nueva variable que nos permite delimitar los espacios vacios
-            y así poder contar palabras completas y no caracteres
             int numPalabras = 0;
             numPalabras = textoTelegrama.Length;*/
 
@@ -49,11 +36,7 @@ namespace DAG2324_Ejercicio_3._1
             //Obtengo el número de palabras que forma el telegrama 
 
             //Si el telegrama es ordinario
-<<<<<<< HEAD
-            if (rOrdinario.Checked)
-=======
-            if (tipoTelegrama != 'u')
->>>>>>> 21877174ea8ee4178478e459c169de2aaa6ffee1
+            if (tipoTelegrama == 'o')
                 if (numPalabras <= 10)
                     coste = 2.5;
                 else
