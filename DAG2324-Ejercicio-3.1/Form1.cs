@@ -20,25 +20,23 @@ namespace DAG2324_Ejercicio_3._1
         private void bCalcular_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = ' ';
+            
             int numPalabras = 0;
             double coste;
             //Leo el telegrama
             textoTelegrama = txtTelegrama.Text;
-            // telegrama urgente?
-            if (cbUrgente.Checked)
-                tipoTelegrama = 'u';
+            
             //Obtengo el número de palabras que forma el telegrama 
             numPalabras = textoTelegrama.Length;
             //Si el telegrama es ordinario
-            if (tipoTelegrama == 'o')
+            if (rOrdinario.Checked)
                 if (numPalabras <= 10)
                     coste = 25;
                 else
                     coste = 0.5 * numPalabras;
             else
             //Si el telegrama es urgente
-            if (tipoTelegrama == 'u')
+            if (rUrgente.Checked)
                 if (numPalabras <= 10)
                     coste = 5;
                 else
